@@ -29,18 +29,21 @@ nginx-deployment   2/2     2            2           101s
 
 [root@Master kube]# kubectl set image deployment nginx-deployment nginx=nginx:1.16.1 --record
 
+
 deployment.apps/nginx-deployment image updated
 
-[root@Master kube]#
+
 ----------------------------------------------------------------------------------------------------------------------------------
 
 [root@Master kube]# kubectl rollout status deployment.v1.apps/nginx-deployment
+
 deployment "nginx-deployment" successfully rolled out
 
 [root@Master kube]#
 
 -----------------------------------------------------------------------------------------------------------------------------------
 [root@Master kube]# kubectl rollout history deployment.v1.apps/nginx-deployment
+
 deployment.apps/nginx-deployment
 
 REVISION  CHANGE-CAUSE
